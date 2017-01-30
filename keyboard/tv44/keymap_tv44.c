@@ -3,75 +3,75 @@
 const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    /* Layer: Base Layer
     * ,-------------------------------------------------.
-    * |Tab|  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P| BSp |
+    * |FN1Tb|Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P| BSp |
     * |-------------------------------------------------|
-    * |FN1 |  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|Fn1'|
+    * |CtEs|  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|Fn1'|
     * |-------------------------------------------------|
-    * |SftEs|  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|FN2|
+    * |Shft[|  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|St]|
     * |-------------------------------------------------|
-    * |Ctrl|  FN2  |Gui |Enter| Space |Alt |Shift|  FN3 |
+    * | FN2|  FN3  |Gui |Enter| Space |  \ |  Alt|  FN2 |
     * `-------------------------------------------------'
     */
    KEYMAP(
-     TAB ,   Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,  BSPC, \
-     FN0  ,   A,   S,   D,   F,   G,   H,   J,   K,   L,SCLN, FN21, \
-     FN22  ,   Z,   X,   C,   V,   B,   N,   M,COMM, DOT,SLSH, FN1, \
-     LCTL,  FN1,  LGUI,     ENT,       SPC,   RALT,   RSFT,  FN2    ),
+     FN0 ,   Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,  BSPC, \
+     FN18 ,   A,   S,   D,   F,   G,   H,   J,   K,   L,SCLN, FN19, \
+     FN15  ,   Z,   X,   C,   V,   B,   N,   M,COMM, DOT,SLSH,FN14, \
+     FN1 ,  FN2,  LGUI,     ENT,       SPC,   BSLS,   RALT,    FN1  ),
 
    /* Layer: Function Layer 1
     * ,-------------------------------------------------.
-    * |  `|  !|  @|  #|  $|  %|  ^|  &|  *|  (|  )| Del |
+    * |   |  !|  @|  #|  $|  %|  ^|  &|  *|  (|  )| Del |
     * |-------------------------------------------------|
-    * |    |  \|  '|  -|  =|  [|  ]| Dn| Up|Lft| Rt|    |
+    * |   `|  -|  =|   |   |   |Lft| Dn| Up| Rt|   |    |
     * |-------------------------------------------------|
-    * |     |Esc|LED|PSc|   |   |   |Stp|Ply|Prv|Nxt|Sft|
-    * |-------------------------------------------------|
-    * |    |  Gui  |    |     |       |    |     |      |
-    * `-------------------------------------------------'
-    */
-   KEYMAP(
-     GRV , FN4, FN5, FN6, FN7, FN8, FN9,FN10,FN11,FN12,FN13,   DEL, \
-     TRNS ,BSLS,QUOT,MINS, EQL,LBRC,RBRC,DOWN,  UP,LEFT,RGHT, TRNS, \
-     TRNS  , ESC,FN20,PSCR,TRNS,TRNS,TRNS,MSTP,MPLY,MPRV,MNXT,RSFT, \
-     TRNS, LGUI,  TRNS,    TRNS,      TRNS,   TRNS,   TRNS,  TRNS   ),
-
-   /* Layer: Function Layer 2
-    * ,-------------------------------------------------.
-    * |  ~|  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|     |
-    * |-------------------------------------------------|
-    * | Esc|  ||  "|  _|  +|  {|  }|  4|  5|  6|Vl+|Entr|
-    * |-------------------------------------------------|
-    * |     |   |   |   |   |   |   |  1|  2|  3|Vl-|   |
+    * |   ~ | _ | + |   |   |   |   |   |   |   |   |   |
     * |-------------------------------------------------|
     * |    |       |    |     |       |    |     |      |
     * `-------------------------------------------------'
     */
    KEYMAP(
-     FN3 ,   1,   2,   3,   4,   5,   6,   7,   8,   9,   0,  TRNS, \
-     ESC  ,FN14,FN15,FN16,FN17,FN18,FN19,   4,   5,   6,VOLU,  ENT, \
-     TRNS  ,TRNS,TRNS,TRNS,TRNS,TRNS,   0,   1,   2,   3,VOLD,TRNS, \
+     TRNS, FN4, FN5, FN6, FN7, FN8, FN9,FN10,FN11,FN12,FN13,   DEL, \
+     GRV  ,MINS, EQL,TRNS,TRNS,TRNS,LEFT,DOWN,  UP,RGHT,TRNS, TRNS, \
+     FN3   ,FN16,FN17,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+     TRNS, TRNS,  TRNS,    TRNS,      TRNS,   TRNS,   TRNS,  TRNS   ),
+
+   /* Layer: Function Layer 2
+    * ,-------------------------------------------------.
+    * |   |  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|     |
+    * |-------------------------------------------------|
+    * |    |   |   |   |   |   |   |   |   |   |   |    |
+    * |-------------------------------------------------|
+    * |     |   |   |   |   |   |   |   |   |   |   |   |
+    * |-------------------------------------------------|
+    * |    |       |    |     |       |    |     |      |
+    * `-------------------------------------------------'
+    */
+   KEYMAP(
+     TRNS,   1,   2,   3,   4,   5,   6,   7,   8,   9,   0,  TRNS, \
+     TRNS ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, TRNS, \
+     TRNS  ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
      TRNS, TRNS,  TRNS,    TRNS,      TRNS,   TRNS,   TRNS,  TRNS   ),
 
    /* Layer: Game Layer
     * ,-------------------------------------------------.
-    * |   |   |   |   |   |   |   | F1| F2| F3| F4|     |
+    * |PSc|  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|     |
     * |-------------------------------------------------|
-    * | Esc|   |   |   |   |   |   | F5| F6| F7| F8|Entr|
+    * |  F1| F2| F3| F4| F5| F6|   |  4|  5|  6|   | Vl+|
     * |-------------------------------------------------|
-    * |Shift|  1|  2|  3|  4|  5|  6| F9|F10|F11|F12|Sft|
+    * |   F7| F8| F9|F10|F11|F12|   |  1|  2|  3|   |Vl-|
     * |-------------------------------------------------|
-    * |    | Shift |  B |Space|    C  |    |     |      |
+    * |    |       | Prv| Ply |  Stp  | Nxt|     |      |
     * `-------------------------------------------------'
     */
    KEYMAP(
-     TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  F1,  F2,  F3,  F4,  TRNS, \
-     ESC  ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  F5,  F6,  F7,  F8,  ENT, \
-     LSFT  ,   1,   2,   3,   4,   5,   6,  F9, F10, F11, F12,RSFT, \
-     TRNS, LSFT,     B,     SPC,         C,   TRNS,   TRNS,  TRNS  ),
+     PSCR,   1,   2,   3,   4,   5,   6,   7,   8,   9,   0,  TRNS, \
+     F1   ,F2  ,F3  ,F4  ,F5  ,F6  ,TRNS,   4,   5,   6,TRNS, VOLU, \
+     F7    ,F8  ,F9  ,F10 ,F11 ,F12 ,TRNS,   1,   2,   3,TRNS,VOLD, \
+     TRNS, TRNS,  MPRV,     MPLY,      MSTP,   MNXT,   TRNS,  TRNS  ),
 };
 
 const action_t PROGMEM fn_actions[] = {
-    [0]  = ACTION_LAYER_MOMENTARY(1),
+    [0] = ACTION_LAYER_TAP_KEY(1, KC_TAB),
     [1]  = ACTION_LAYER_MOMENTARY(2),
     [2]  = ACTION_LAYER_TOGGLE(3),
     [3]  = ACTION_MODS_KEY(MOD_LSFT, KC_GRV),
@@ -85,13 +85,10 @@ const action_t PROGMEM fn_actions[] = {
     [11] = ACTION_MODS_KEY(MOD_LSFT, KC_8),
     [12] = ACTION_MODS_KEY(MOD_LSFT, KC_9),
     [13] = ACTION_MODS_KEY(MOD_LSFT, KC_0),
-    [14] = ACTION_MODS_KEY(MOD_LSFT, KC_BSLS),
-    [15] = ACTION_MODS_KEY(MOD_LSFT, KC_QUOT),
+    [14] = ACTION_MODS_TAP_KEY(MOD_RSFT, KC_RBRC),
+    [15] = ACTION_MODS_TAP_KEY(MOD_LSFT, KC_LBRC),
     [16] = ACTION_MODS_KEY(MOD_LSFT, KC_MINS),
     [17] = ACTION_MODS_KEY(MOD_LSFT, KC_EQL),
-    [18] = ACTION_MODS_KEY(MOD_LSFT, KC_LBRC),
-    [19] = ACTION_MODS_KEY(MOD_LSFT, KC_RBRC),
-    [20] = ACTION_BACKLIGHT_STEP(),
-    [21] = ACTION_LAYER_TAP_KEY(1, KC_QUOT),
-    [22] = ACTION_MODS_TAP_KEY(MOD_LSFT, KC_ESC)
+    [18] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_ESC),
+    [19] = ACTION_LAYER_TAP_KEY(1, KC_QUOT)
 };
